@@ -1,7 +1,18 @@
-/* #6C6D70
-#24AAE1
-#3F3F41
-*/
+@font-face {
+  font-family: 'Simplo-Light';
+  src: url('assets/Font/Simplo-Light.eot?#iefix') format('embedded-opentype'),  url('assets/Font/Simplo-Light.otf')  format('opentype'),
+	     url('assets/Font/Simplo-Light.woff') format('woff'), url('assets/Font/Simplo-Light.ttf')  format('truetype'), url('assets/Font/Simplo-Light.svg#Simplo-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Simplo-Bold';
+  src: url('assets/Font/Simplo-Bold.eot?#iefix') format('embedded-opentype'),  url('assets/Font/Simplo-Bold.otf')  format('opentype'),
+	     url('assets/Font/Simplo-Bold.woff') format('woff'), url('assets/Font/Simplo-Bold.ttf')  format('truetype'), url('assets/Font/Simplo-Bold.svg#Simplo-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 *{
@@ -10,6 +21,13 @@
 
 html{
     font-size: 14px;
+    font-family: 'Simplo-Light';
+    font-weight: normal;
+}
+
+h1, h2,h3,h4,h5{
+    font-family: 'Simplo-Bold';
+    font-weight: normal;
 }
 
 body{
@@ -36,7 +54,7 @@ input[type="text"],
 input[type="password"]{
     width:320px;
     max-width:100%;
-    padding:0.5rem 1rem;
+    padding:0.5em 1em;
     border:0px;
     border-radius: 5px;
     color: #6C6D70;
@@ -49,7 +67,7 @@ input[type="password"]{
 button{
     width:320px;
     max-width:100%;
-    padding:0.5rem 1rem;
+    padding:0.5em 1em;
     border:0px;
     border-radius: 5px;
     color: #24AAE1;
@@ -57,14 +75,14 @@ button{
 }
 
 #home_page, #favorites{
-    margin-top: 2rem;
+    margin-top: 2em;
 }
 
 
 /* HEADER */
 header{
     background-color: #24AAE1;
-    padding: 1rem 0;
+    padding: 1em 0;
 }
 
 header .content{
@@ -75,11 +93,11 @@ header .content{
 
 header img.logo{
     height:80px;
-    margin-left: 0rem;
+    margin-left: 0em;
 }
 header img{
     height:30px;
-    margin-left: 1rem;
+    margin-left: 1em;
 }
 
 header .center{
@@ -99,10 +117,10 @@ header .right{
     width:100%;
     height: 100vh;
     background-color: #24AAE1;
-    display: none;
     align-items: center;
     justify-content: center;
     color: white;
+    display: flex;
 }
 
 #login_form .center{
@@ -112,18 +130,18 @@ header .right{
 }
 
 #login_form *{
-    margin: 0.5rem 0;
+    margin: 0.5em 0;
 }
 
 #login_form img{
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
     align-self: center;
     height: 180px;
 }
 
 #login_form a{
     color:white;
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
 }
 
 #login_form a.signup{
@@ -136,7 +154,7 @@ header .right{
 .items{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2rem;
+    grid-gap: 2em;
 }
 
 .items img{
@@ -147,18 +165,18 @@ header .right{
 }
 
 .items .attr{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.8rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
     color: #6C6D70;
 }
 
 .items h2{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.25em;
     line-height: 1.25em;
-    min-height: 3.25rem;
+    min-height: 3.25em;
 }
 
 .items .favorite img{
@@ -182,14 +200,14 @@ header .right{
     top: 108px;
     left:0;
     width:100%;
-    padding: 2rem;
+    padding: 2em;
     background-color: rgba(255, 255, 255, 0.95)
 }
 
 #filters .content{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    grid-gap: 2em;
 }
 
 #filters .attr{
@@ -200,8 +218,8 @@ header .right{
 .attr label{
     display: flex;
     width:100%;
-    margin: 0.5rem 0;
-    padding: 0 1rem;
+    margin: 0.5em 0;
+    padding: 0 1em;
     justify-content: space-between;
 }
 
