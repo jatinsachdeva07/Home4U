@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME4U</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="content">
+            <img src="assets/logo.png" id="home_btn" style="cursor:pointer" class="logo" alt="">
+            <div class="center" id="header_center">
+                <input type="text" id="search" onkeyup="searchFn(value)" placeholder="What are you looking for?">
+                <span id="filterheading" style="display:none">Filters</span>
+                <span id="favoritesheading" style="display:none">favorites</span>
+            </div>
+            <div class="right" id="header_right">
+                <img id="favorites_btn" style="cursor:pointer" src="assets/favourites_white.png" alt="">
+                <img id="filters_btn" style="cursor:pointer" src="assets/filters.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <section id="login_form">
+        <div class="center">
+            <img src="assets/Logo.png" alt="">
+            <input type="text" placeholder="Email Address">
+            <input type="password" placeholder="Password">
+            <button onclick="closeLogin()" style="cursor:pointer">Sign In</button>
+            <a href="javascript:;">Forgot Password?</a>
+            <span>Don't have an account yet?</span>
+            <a href="javascript:;" class="signup">Sign Up</a>
+        </div>
+    </section>
+
+    <section id="home" class="content">
+        <div class="items" id="all_items">
+        </div>
+    </section>
+
+    <section id="filters">
+        <div class="content">
+            <div class="attr">
+                <label for="">
+                    <span>1 Bedroom</span>
+                    <input type="checkbox" onclick="addToFilter('1 Bedroom')" name="" id="">
+                    <div class="image"></div>
+                </label>
+                <label for="">
+                    <span>2 Bedroom</span>
+                    <input type="checkbox" onclick="addToFilter('2 Bedroom')" name="" id="">
+                    <div class="image"></div>
+                </label>
+                <label for="">
+                    <span>3 Bedroom</span>
+                    <input type="checkbox" onclick="addToFilter('3 Bedroom')" name="" id="">
+                    <div class="image"></div>
+                </label>
+                <label for="">
+                    <span>Apartment</span>
+                    <input type="checkbox" onclick="addToFilter('Apartment')" name="" id="">
+                    <div class="image"></div>
+                </label>
+                <label for="">
+                    <span>Basement</span>
+                    <input type="checkbox" onclick="addToFilter('Basement')" name="" id="">
+                    <div class="image"></div>
+                </label>
+                <label for="">
+                    <span>House</span>
+                    <input type="checkbox" onclick="addToFilter('House')" name="" id="">
+                    <div class="image"></div>
+                </label>
+            </div>
+            <div class="pricerange">
+                <h3>Price Range</h3>
+                <div class="range">
+                    <div class="min">
+                        <span class="minamount">$ <span id="minamount"></span></span>
+                        <input type="range" id="minamount_set" class="rng" onchange="minRange(value)" min="0" max="2000" value="" />
+                    </div>
+                    <div class="max">
+                        <span class="maxamount">$ <span id="maxamount"></span></span>
+                        <input type="range" id="maxamount_set" class="rng" onchange="maxRange(value)" min="0" max="2000" value="" />
+                    </div>
+                </div>
+            </div>
+            <div class="filter">
+                <button onclick="filterFn()" style="cursor:pointer">Apply Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="favorites" class="content" style="display:none;">
+        <div class="items" id="fav_items">
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
